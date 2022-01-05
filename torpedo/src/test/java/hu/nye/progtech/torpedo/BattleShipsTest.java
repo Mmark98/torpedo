@@ -18,4 +18,20 @@ class BattleShipsTest {
 
 
     }
+
+    @Test
+    void printMap2() {
+    }
+
+    @Test
+    void testUserLoc() {
+    }
+
+    @Test
+    void userTurn() {
+    }
+
+    @Test
+    void battle() {
+    }
 }

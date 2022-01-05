@@ -166,21 +166,21 @@ class BattleShips {
     }
     public static void battle() {
         printMap(ocean); //feltoltott terkep kiirasa
-        System.out.println("\nA te hajod: " + userShips + " | szamitogep hajo: " + computerShips + "\n------------------------------------");
+        System.out.println("\nA te hajod: " + userShips + " | szamitogep hajo: " + computerShips + "\n-----------------------------------");
 
         while (userShips > 0 && computerShips > 0) {
             userTurn();
             computerTurn();
             printMap(ocean);
-            System.out.println("\nA te hajod: " + userShips + " | szamitogep hajo: " + computerShips + "\n------------------------------------");
+            System.out.println("\nA te hajod: " + userShips + " | szamitogep hajo: " + computerShips + "\n-------------------------------");
         }
 
         if (userShips == 0) {
             System.out.println("\n*** Jatek vege ***");
-            System.out.println("\nA te hajod: " + userShips + " | szamitogep hajo: " + computerShips + "\n------------------------------------");
+            System.out.println("\nA te hajod: " + userShips + " | szamitogep hajo: " + computerShips + "\n-------------------------------");
         } else if (computerShips == 0) {
             System.out.println("gartulalok! Megnyerted a csatat :)");
-            System.out.println("\nA te hajod: " + userShips + " | szamitogep hajo: " + computerShips + "\n------------------------------------");
+            System.out.println("\nA te hajod: " + userShips + " | szamitogep hajo: " + computerShips + "\n-------------------------------");
         }
         printMap2(ocean2);// teszt
     }
