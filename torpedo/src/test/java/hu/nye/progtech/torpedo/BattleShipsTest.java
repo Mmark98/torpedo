@@ -11,4 +11,11 @@ class BattleShipsTest {
         char[][] BattleShipsTest = new char[10][10];
 
     }
+
+    @Test
+    void userLoc()
+    {
+        
+
+    }
 }

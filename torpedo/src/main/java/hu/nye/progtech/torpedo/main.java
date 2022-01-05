@@ -9,15 +9,15 @@ class BattleShips {
     public static Scanner input = new Scanner(System.in);
     public static Random rand = new Random();
 
-    public static String[][] ocean = new String[10][10];//saját hajom terkepe
-    public static String[][] ocean2 = new String[10][10];//ocean2 szamitogep terkepe
+    public static String[][] ocean = new String[10][10];
+    public static String[][] ocean2 = new String[10][10];
 
     public static int userShips = 0;
     public static int computerShips = 0;
 
     public static void main(String[] args) {
         into();
-        userLoc(ocean); //a jatekos hajoja
+        userLoc(ocean);
         compLoc(ocean);
         battle();
     }
@@ -158,7 +158,7 @@ class BattleShips {
                 ocean[row][col] = "-";
                 userShips--;
                 turn++;
-            } else {//Player missed. No ship on the entered coordinates
+            } else {//Jatekos tevesztett. nincs hajo ezzen a koordinatan
                 System.out.println("Bocsi, teves!");
                 ocean[row][col] = "X";
                 turn++;
@@ -183,7 +183,7 @@ class BattleShips {
             System.out.println("gartulalok! Megnyerted a csatat :)");
             System.out.println("\nA te hajod: " + userShips + " | szamitogep hajo: " + computerShips + "\n------------------------------------");
         }
-        printMap2(ocean2);// just for test
+        printMap2(ocean2);// teszt
     }
     public static void into() {
         System.out.println("\n Udvozlom a Csatahajok jatekban ");
