@@ -15,7 +15,7 @@ class BattleShipsTest {
     @Test
     void userLoc()
     {
-        
+
 
     }
 }
