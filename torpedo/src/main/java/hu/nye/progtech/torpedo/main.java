@@ -40,6 +40,7 @@ class BattleShips {
         System.out.println("  0123456789  ");
     }
 
+
     public static void printMap2(String[][] ocean2) {
         //just for test
         System.out.println("OCEAN2");
