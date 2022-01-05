@@ -16,17 +16,17 @@ class BattleShips {
     public static int computerShips = 0;
 
     public static void main(String[] args) {
-       // intro();
+        intro();
         userLoc(ocean); //deploy user ships.
         compLoc(ocean); //deploy computer ships
         battle();
     }
 
-   /* public static void intro() {
+    public static void intro() {
         System.out.println("\n**** Welcome to Battle Ships game ****");
         System.out.println("\nRight now, the sea is empty.\n");
         printMap(ocean);
-    }*/
+    }
 
     public static void printMap(String[][] ocean) {
         System.out.println("\n  0123456789  ");
