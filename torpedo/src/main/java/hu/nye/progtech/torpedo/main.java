@@ -57,6 +57,7 @@ class BattleShips {
             System.out.println("|" + row);
         }
         System.out.println("  0123456789  ");
+        System.out.println("\nA szamitogep csatahajoi a terkepen!");
     }
 
     public static void userLoc(String[][] ocean) {
@@ -161,7 +162,7 @@ class BattleShips {
                 //nem lohetsz a 10x10-es racson kivul
                 System.out.println("A megadott koordinata tartomanyon kivül esik. Kerjuk, probalja ujra.\n");
             }
-            else if (ocean[row][col] == "!" || ocean[row][col] == "x" || ocean[row][col] == "-")
+            else if (ocean[row][col] == "!" || ocean[row][col] == "X" || ocean[row][col] == "+")
             {
                 System.out.println("A megadott koordinata mar hasznalatban volt. Kerjuk, probalja ujra.\n");
             }
@@ -178,7 +179,7 @@ class BattleShips {
             {
                 //A jatekos megadta a sajat hajoja koordinatait (a jatekos elvesziti a hajot).
                 System.out.println("O nem, elsullyesztetted a sajat hajodat! ");
-                ocean[row][col] = "-";
+                ocean[row][col] = "!";
                 userShips--;
                 turn++;
             }
@@ -191,7 +192,7 @@ class BattleShips {
             }
         }
     }
-    public static void battle() {
+    private static void battle() {
         printMap(ocean);//feltoltott terkep kiirasa
         System.out.println("\nA te hajod: " + userShips + " | szamitogep hajo: " + computerShips + "\n-----------------------------------");
 
