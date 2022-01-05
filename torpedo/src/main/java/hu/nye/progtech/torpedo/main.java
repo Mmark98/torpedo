@@ -16,9 +16,9 @@ class BattleShips {
     public static int computerShips = 0;
 
     public static void main(String[] args) {
-        bevezetes();
+        into();
         userLoc(ocean); //a jatekos hajoja
-        compLoc(ocean); //a szamitogep hajoja
+        compLoc(ocean);
         battle();
     }
 
@@ -69,9 +69,9 @@ class BattleShips {
             int row = input.nextInt();
 
 
-            if (row > 9 || col > 9) {//you can’t place ships outside the 10 by 10 grid
+            if (row > 9 || col > 9) {//nem helyezhetsz hajokat a 10 x 10 racson kivulre
                 System.out.println("A megadott koordinata tartomanyon kivül esik. Kerjuk, probalja ujra");
-            } else if (ocean[row][col] != null) { //you can NOT place two or more ships on the same location
+            } else if (ocean[row][col] != null) { //NEM helyezhet el ket vagy tobb hajot ugyanarra a helyre
                 System.out.println("A megadott koordinata mar hasznalatban van. Kerjuk, probalja ujra");
             } else {
                 ocean[row][col] = "@";
@@ -84,11 +84,11 @@ class BattleShips {
         System.out.println("\n\nA szamitogep hajokat telept:");
 
         while (computerShips < 5) {
-            int row = rand.nextInt(10), col = rand.nextInt(10); //you can’t place ships outside the 10 by 10 grid
+            int row = rand.nextInt(10), col = rand.nextInt(10); //nem helyezhetsz hajokat a 10 x 10 racson kivulre
 
-            if (ocean[row][col] == null && ocean2[row][col] == null) {//you cannot place the ship on a location that is already taken by another ship (player’s or computer’s)
+            if (ocean[row][col] == null && ocean2[row][col] == null) {//nem helyezheti el a hajot  olyan helyre, amelyet mar elfoglalt egy masik hajo (jatekos vagy szamitogep)
                 System.out.println("Hajo telepitve. ");
-                ocean2[row][col] = "@";//place ships in Ocean2
+                ocean2[row][col] = "@";//hajok helye az ocean2 on
                 computerShips++;
             }
         }
@@ -184,8 +184,8 @@ class BattleShips {
         }
         printMap2(ocean2);// just for test
     }
-    public static void bevezetes() {
-        System.out.println("\n Udvozloma a Csatahajok jatekban ");
+    public static void into() {
+        System.out.println("\n Udvozlom a Csatahajok jatekban ");
         System.out.println("\nmost a terkep ures.\n");
         printMap(ocean);
     }
