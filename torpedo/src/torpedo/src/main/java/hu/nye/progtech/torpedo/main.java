@@ -45,7 +45,6 @@ class BattleShips {
         //just for test
         System.out.println("OCEAN2");
         System.out.println("  0123456789  ");
-        //Create the numbers on the grid:
         for (int row = 0; row < ocean2.length; row++) {
             System.out.print(row + "|");
             for (int col = 0; col < ocean2[row].length; col++) {
